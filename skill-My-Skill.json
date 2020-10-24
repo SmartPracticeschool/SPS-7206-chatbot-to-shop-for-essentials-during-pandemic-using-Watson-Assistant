@@ -1,0 +1,945 @@
+{
+  "intents": [
+    {
+      "intent": "enquiry",
+      "examples": [
+        {
+          "text": "Is there any discount?"
+        },
+        {
+          "text": "I want to see the menu"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "Good Afternoon"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good morning"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "order",
+      "examples": [
+        {
+          "text": "I want some vegetables and fruits"
+        },
+        {
+          "text": "I want to place an order"
+        },
+        {
+          "text": "I want to purchase"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "email",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[a-z0-9._%+-]+@[a-z0-9.-]+\\."
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "bakery",
+          "synonyms": [
+            "bakery items"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "fruit",
+          "synonyms": [
+            "fruits"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "grocery",
+          "synonyms": [
+            "pulses"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "menu",
+          "synonyms": [
+            "menu item"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "milk product",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Offers",
+          "synonyms": [
+            "Discount"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "special",
+          "synonyms": [
+            "specials"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "spices",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "vegetables",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good Afternoon",
+          "synonyms": [
+            "GA",
+            "Gud AFternoon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "GE",
+            "Gud Evening"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good morning",
+          "synonyms": [
+            "GM",
+            "Gud Mng"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "item",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Banana",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bread",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Brinjal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Butter",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chana Dal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Curd",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dalchini",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Jeera",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Khari",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lavang",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mango",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Milk",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Miri",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Orange",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Paneer",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ptotato",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Rice",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Spinach",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tomato",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Toor Dal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tost",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Wheat",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "order",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "order",
+          "synonyms": [
+            "buy",
+            "purchase"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "payment",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "card",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "cod",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "upi",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "special",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Bread",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Fresh Methi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mango",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Spinach",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_5_1603170075169",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_5_1603170075169",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1603245872788"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1603246636306",
+      "context": {
+        "item": "@item"
+      },
+      "conditions": "@item",
+      "event_name": "input",
+      "dialog_node": "handler_1_1603246636330"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1603170543137",
+      "context": {
+        "payment": "@payment"
+      },
+      "conditions": "@payment",
+      "event_name": "input",
+      "dialog_node": "handler_2_1603170543150"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "please enter the quantity"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1603170375326",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1603170375337",
+      "previous_sibling": "handler_5_1603170375337"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1603170375326",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_5_1603170375337"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "we accept cod, up, card. What is your mode of payment?i"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_6_1603170543137",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1603170543150",
+      "previous_sibling": "handler_2_1603170543150"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Can you provide me the item you want? You can have menu card to order."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1603246636306",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1603246636330",
+      "previous_sibling": "handler_1_1603246636330"
+    },
+    {
+      "type": "standard",
+      "title": "email",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you for giving your email Id. Your mail id is $email id will be used for further communication."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "email": "@email.literal"
+      },
+      "conditions": "@email",
+      "dialog_node": "node_1_1603186336541"
+    },
+    {
+      "type": "standard",
+      "title": "greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#greetings || @greetings",
+      "dialog_node": "node_2_1603168462813",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "enquiry",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@enquiry",
+      "digress_in": "returns",
+      "dialog_node": "node_2_1603168952447",
+      "digress_out": "allow_all_never_return",
+      "previous_sibling": "node_2_1603168462813"
+    },
+    {
+      "type": "frame",
+      "title": "order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank you, your order of $number of $item is placed please pay using $payment"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#order && @order:order",
+      "digress_in": "returns",
+      "dialog_node": "node_5_1603170075169",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_2_1603168952447",
+      "digress_out_slots": "allow_returning"
+    },
+    {
+      "type": "standard",
+      "title": "deleting context",
+      "output": {
+        "deleted": "<?context.remove('item')?><?context.remove('number')?><?context.remove('payment')?>",
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1603170075169",
+      "conditions": "true",
+      "dialog_node": "node_5_1603176686288",
+      "previous_sibling": "handler_1_1603245872788"
+    },
+    {
+      "type": "standard",
+      "title": "Specials",
+      "parent": "node_2_1603168952447",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@special",
+      "dialog_node": "node_6_1603244803098"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs 20 rupees"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1603244803098",
+      "conditions": "@special:Bread",
+      "dialog_node": "response_10_1603252107571",
+      "previous_sibling": "response_1_1603245708941"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It cost 50 rupees"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1603244803098",
+      "conditions": "@special:Spinach",
+      "dialog_node": "response_1_1603245708941",
+      "previous_sibling": "response_5_1603245614585"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Fruits\nOrange\nBanana\nMango"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168952447",
+      "conditions": "@enquiry:fruit",
+      "dialog_node": "response_2_1603244255740",
+      "previous_sibling": "response_6_1603244195540"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Milk Product\nMilk\nCurd\nPaneer\nButter"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168952447",
+      "conditions": "@enquiry:(milk product)",
+      "dialog_node": "response_2_1603244324372",
+      "previous_sibling": "response_2_1603244255740"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Vegetables\nSpinach\nBrinjal\nTomato\nPtotato\nBrinjal"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168952447",
+      "conditions": "@enquiry:vegetables",
+      "dialog_node": "response_3_1603243548432",
+      "previous_sibling": "response_8_1603242969204"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "We have 20% off on Vegetables and milk products"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168952447",
+      "conditions": "@enquiry:Offers",
+      "dialog_node": "response_3_1603292262427",
+      "previous_sibling": "response_7_1603250801548"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Grocery/Pulses\nWheat\nRice\nToor Dal\nChana Dal"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168952447",
+      "conditions": "@enquiry:grocery",
+      "dialog_node": "response_4_1603244104303",
+      "previous_sibling": "response_3_1603243548432"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It costs 50 rupees per piece"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1603244803098",
+      "conditions": "@special:Mango",
+      "dialog_node": "response_5_1603245614585"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "good Evening"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168462813",
+      "conditions": "@greetings:(Good Evening)",
+      "dialog_node": "response_6_1603168661516",
+      "previous_sibling": "response_8_1603168620591"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good Afternoon"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168462813",
+      "conditions": "@greetings:(Good Afternoon)",
+      "dialog_node": "response_6_1603168690753",
+      "previous_sibling": "response_6_1603168661516"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bakery Item\nBread \nTost\nKhari"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168952447",
+      "conditions": "@enquiry:bakery",
+      "dialog_node": "response_6_1603244195540",
+      "previous_sibling": "response_9_1603244153859"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Specials",
+            "options": [
+              {
+                "label": "Mango",
+                "value": {
+                  "input": {
+                    "text": "Mango"
+                  }
+                }
+              },
+              {
+                "label": "Spinach",
+                "value": {
+                  "input": {
+                    "text": "Spinach"
+                  }
+                }
+              },
+              {
+                "label": "Bread",
+                "value": {
+                  "input": {
+                    "text": "Bread"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1603168952447",
+      "conditions": "@enquiry:special",
+      "dialog_node": "response_7_1603250801548",
+      "previous_sibling": "response_2_1603244324372"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good morning"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168462813",
+      "conditions": "@greetings:(Good morning)",
+      "dialog_node": "response_8_1603168620591"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Vegetables\nSpinach\nBrinjal\nTomato\nPtotato\nBrinjal\nFruits\nOrange\nBanana\nMango\nBakery Item\nBread \nTost\nKhari\nMilk Products\nMilk\nCurd\nPaneer\nButter\nGrocery/Pulses\nWheat\nRice\nToor Dal\nChana Dal\nSpices\nJeera\nMiri\nLavang\nDalchini"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168952447",
+      "conditions": "@enquiry:menu",
+      "dialog_node": "response_8_1603242969204",
+      "previous_sibling": "node_6_1603244803098"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Spices\nJeera\nMiri\nLavang\nDalchini"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1603168952447",
+      "conditions": "@enquiry:spices",
+      "dialog_node": "response_9_1603244153859",
+      "previous_sibling": "response_4_1603244104303"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1603170075169",
+      "variable": "$item",
+      "dialog_node": "slot_1_1603246636306",
+      "previous_sibling": "node_5_1603176686288"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1603170075169",
+      "variable": "$payment",
+      "dialog_node": "slot_6_1603170543137",
+      "previous_sibling": "slot_9_1603170375326"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1603170075169",
+      "variable": "$number",
+      "dialog_node": "slot_9_1603170375326",
+      "previous_sibling": "slot_1_1603246636306"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. you can place order for fruits, vegetables and grocery here, How can I help you?\nCan you please give your name and mail id."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My Skill",
+  "language": "en",
+  "description": ""
+}
